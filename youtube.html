@@ -1,78 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Forever</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
-        * {
-            font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
         }
-        body {
-            text-align: center;
-            padding: 20px;
-        }
-        input {
-            width: 60%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px 15px;
-            font-size: 16px;
-            background-color: #46aae9;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #3690d5;
-        }
-        .iframe-container {
-            max-width: 800px;
-            margin: 20px auto;
-            display: none; /* Hidden until video is loaded */
-        }
+
         iframe {
             width: 100%;
-            height: 450px;
-            border: none;
+            height: 100%;
+            border: none; /* Remove default border */
         }
     </style>
-    <script>
-        function purifyVideo() {
-            let input = document.getElementById("videoURL").value.trim();
-            
-            // Improved regex for extracting video ID
-            let match = input.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/|v=)([a-zA-Z0-9_-]{11})/);
-            
-            if (match) {
-                let videoID = match[1]; // Extracted video ID
-                let embedURL = "https://inv.nadeko.net/embed/" + videoID;
-                
-                let iframe = document.getElementById("videoFrame");
-                iframe.src = embedURL;
-                
-                document.getElementById("iframeContainer").style.display = "block"; // Show the iframe
-            } else {
-                alert("Invalid YouTube URL. Please enter a valid link.");
-            }
-        }
-    </script>
 </head>
 <body>
-    <h1>Math Forever</h1>
-    <p>Thats all.</p>
-
-    <input type="text" id="videoURL" placeholder="Enter YouTube URL">
-    <button onclick="purifyVideo()">Purify</button>
-
-    <div id="iframeContainer" class="iframe-container">
-        <iframe id="videoFrame" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+    <iframe src="https://voidnetworkisthebest.global.ssl.fastly.net/uv/service/aHR0cHM6Ly93d3cueW91dHViZS5jb20vc2hvcnRzL3hjSW4yQXFNYkFz" allowfullscreen></iframe>
 </body>
 </html>
